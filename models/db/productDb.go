@@ -14,9 +14,9 @@ import (
 // DB接続する
 func open() *gorm.DB {
 	DBMS := "mysql"
-	USER := "root"
-	PASS := "root"
-	PROTOCOL := "tcp(localhost:3306)"
+	USER := "default"
+	PASS := "password"
+	PROTOCOL := "tcp(127.0.0.1:3306)"
 	DBNAME := "Shopping"
 	CONNECT := USER + ":" + PASS + "@" + PROTOCOL + "/" + DBNAME
 	db, err := gorm.Open(DBMS, CONNECT)
